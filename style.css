@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+    scroll-margin: 12rem;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #101010;
+    text-transform: capitalize;
+    padding: 8px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    line-height: 52px;
+    font-size: 17px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+ul li a.active {
+    background-color: #a43029;
+    color: #fff;
+    border-radius: 5px;
+
+}
+
+.content-block {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+
+    .content-block {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .content-block {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .content-block {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .content-block {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .content-block {
+        max-width: 1320px;
+    }
+}
+
+nav .logo h2 {
+    float: right;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 3.5rem;
+    padding-left: 10px;
+}
+
+nav .logo img {
+    width: 50px;
+}
+
+nav ul li a:hover {
+    background-color: #a43029;
+    color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+@media (max-width:600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 0.5rem;
+    }
+
+    nav li {
+        padding: 0.5rem 0;
+    }
+}
+
+/*------------ Hero-section ------------*/
+.hero-section {
+    padding-top: 1rem;
+    background-color: azure;
+}
+
+.hero-image-section {
+    min-height: calc(100vh-88px);
+    overflow: hidden;
+}
+
+
+.hero-heading h3,
+.hero-heading h2 {
+    text-align: center;
+}
+
+
+.hero-image-section .hero-image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    /* animation-name:zoomIn; */
+    /* animation-duration: 15s; */
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
+    animation: zoomIn 25s infinite alternate;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    float: right;
+    width: 33.33%;
+    /* 2-layout=50%,4-layout=25% */
+    padding: 1.5rem;
+    /* border: 2px solid black; */
+    /* background-color: rgba(246, 216, 221, 0.644); */
+}
+
+.card {
+    border-radius: 10px;
+    background-color: #faebeb;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.column img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.column h2 {
+    padding-bottom: 10px;
+}
+
+.column p {
+    line-height: 25px;
+    text-align: justify;
+}
+
+.column a {
+    color: #101010;
+}
+
+.column button {
+    padding: 10px 20px;
+    margin: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #faebeb;
+}
+
+.column button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 15px;
+}
+
+.column button:hover {
+    background-color: pink;
+    color: white;
+    transition: all 0.3s;
+}
+
+footer .column-footer {
+    float: right;
+    width: 33.33%;
+    /* 2-layout=50%,4-layout=25% */
+    padding: 1.5rem;
+}
+
+footer .column-footer a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+footer .column-footer h2 {
+    text-align: center;
+}
+
+footer {
+    background-color: #faebeb;
+    color: #101010;
+    margin-top: 20px;
+}

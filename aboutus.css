@@ -1,0 +1,102 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Poppins", sans-serif;
+        }
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: #101010;
+            text-transform: capitalize;
+            padding: 8px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            line-height: 52px;
+            font-size: 17px;
+        }
+
+        h1 {
+            font-weight: 600;
+        }
+
+        h2 {
+            font-weight: 500;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        ul li a.active {
+            background-color: #a43029;
+            color: #fff;
+            border-radius: 5px;
+
+        }
+
+        nav .logo h2 {
+            float: right;
+            text-transform: uppercase;
+            font-weight: 600;
+            line-height: 3.5rem;
+            padding-left: 10px;
+        }
+
+        nav .logo img {
+            width: 50px;
+
+        }
+
+
+        nav ul li a:hover {
+            background-color: #a43029;
+            color: white;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .container {
+            padding-top: 20px;
+            margin: 1rem;
+        }
+
+        .container h1 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+
+        @media (max-width:600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding-top: 0.5rem;
+            }
+
+            nav li {
+                padding: 0.5rem 0;
+            }
+        }
