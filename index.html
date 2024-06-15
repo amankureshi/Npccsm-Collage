@@ -13,25 +13,26 @@
 <body>
 
     <div class="content-block">
-        <nav>
-            <div class="logo">
-                <h2>npccsm</h2>
-                <img src="images/NPCCSMLOGO-removebg-preview (1).png">
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/NPCCSMLOGO-removebg-preview (1).png" width="40px">
+                    <a href="#">Npccsm</a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Factlis</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
             </div>
-            <ul>
-                <li>
-                    <a class="active" href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="/aboutus.html">About</a>
-                </li>
-                <li>
-                    <a href="/faculties.html">Factlis</a>
-                </li>
-                <li>
-                    <a href="/contact.html">Contact us</a>
-                </li>
-            </ul>
         </nav>
     </div>
     </ <!--------- hero-section ------->
@@ -134,7 +135,7 @@
                 </div>
                 <div class="column-footer">
                     <h2>Syallbus</h2>
-                    <p align="justify"> <a href="syallbus/bcasem-1.pdf">
+                    <p> <a href="syallbus/bcasem-1.pdf">
                             BCA Sem - I, </a>
                         <a href="syallbus/bbasem-1.pdf">
                             BBA Sem - I
@@ -161,6 +162,41 @@
     </footer>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        $('.navTrigger').click(function () {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+
+        });
+
+    </script>
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $('.navTrigger').click(function () {
+            $(this).toggleClass('active');
+            console.log("Clicked menu");
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+
+        });
+
+    </script>
+
+    <!-- Navbar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
     </script>
 </body>
 
